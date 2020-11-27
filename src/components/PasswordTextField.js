@@ -4,26 +4,25 @@ import Color from '../utils/Colors'
 import Constants from '../const/Constants'
 
 
-const EmailTextField = ({term, placeHolder, onTermChange, onValidateEmailAddress, error}) => {
+const EmailTextField = ({ term, placeHolder, onTermChange, onValidateEmailAddress, error }) => {
 
-   return (
-    <View>
+    return (
+        <View>
+            <Text style={styles.ErrorText}> {error}</Text>
+            <View style={styles.TextFieldView}>
+                <TextInput
+                    autoCorrect={false}
+                    style={styles.TextField}
+                    placeholder={placeHolder}
+                    value={term}
+                    onChangeText={onTermChange}
+                    onEndEditing={onValidateEmailAddress}
 
-      <Text style = {styles.ErrorText}> {error} </Text>
-
-        <View style = {styles.TextFieldView}>
-
-              <TextInput
-              autoCorrect= {false}
-              style = {styles.TextField}
-              placeholder = {placeHolder}
-              value = {term}
-              onChangeText = {onTermChange}
-              onEndEditing = {onValidateEmailAddress}
-              />
+                />
+            </View>
         </View>
-    </View>
-   )
+    )
+
 }
 
 const styles = StyleSheet.create({
@@ -41,13 +40,13 @@ const styles = StyleSheet.create({
         borderColor: Color.black,
         borderWidth: 1,
         justifyContent: 'center',
-        backgroundColor: Color.white
+        backgroundColor: Color.smoke
     },
     ErrorText: {
         fontSize: 12,
         color: Color.red,
         marginBottom: -5,
-        marginHorizontal: 20
+        marginHorizontal: 20,
     }
 
 })
