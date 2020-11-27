@@ -4,6 +4,7 @@ import CustomTextField from '../components/CustomTextField'
 import Button from '../components/Button'
 import Strings from '../const/String'
 import Utility from '../utils/Utility'
+import Color from '../utils/Colors'
 import firebase, { firestore } from '../firebase/Firebase'
 
 function AddGroupScreen({ navigation }) {
@@ -80,6 +81,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: Color.theme
 
     }
 })

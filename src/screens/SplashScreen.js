@@ -35,7 +35,7 @@ function SplashScreen({navigation}){
     
 
 return(
-    <View style = {styles.constainer}>
+    <View style = {styles.container}>
         <Image style = {styles.logo} source = {images.logo}></Image>
     </View>
 )
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         margin: 0.04 * Constants.screenHeight
     },
-    constainer: {
+    container: {
         flex: 1,
         justifyContent: 'center',
         alignItems:'center',

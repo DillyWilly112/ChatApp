@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, FlatList, TouchableOpacity, Alert } from 'react
 import ButtonWithBackground from '../components/ButtonWithBackground'
 import GroupItem from '../components/GroupsItems'
 import images from '../const/Images'
+import Color from '../utils/Colors'
 import firebase, { firestore } from '../firebase/Firebase'
 
 function GroupsScreen({ navigation }) {
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ebebeb'
+        backgroundColor: Color.theme
     },
     text: {
         color: '#101010',

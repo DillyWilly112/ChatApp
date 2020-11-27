@@ -1,5 +1,6 @@
 import React from 'react'
 import {StyleSheet, View, Text} from 'react-native'
+import Color from '../utils/Colors'
 
 function ChatScreen() {
 return(
@@ -15,7 +16,7 @@ container: {
 flex: 1,
 justifyContent: 'center',
 alignItems: 'center',
-backgroundColor: '#66ff66',
+backgroundColor: Color.theme
 },
 text: {
     color: '#ffffff',

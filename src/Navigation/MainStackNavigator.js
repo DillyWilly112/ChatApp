@@ -6,44 +6,48 @@ import SignInScreen from '../screens/SignInScreen'
 import GroupsScreen from '../screens/GroupsScreen'
 import AddGroupScreen from '../screens/AddGroupScreen'
 import ChatScreen from '../screens/ChatScreen'
+import SplashScreen from '../screens/SplashScreen'
 
 const Stack = createStackNavigator()
 
+
 function ChatFlow() {
-    return(
+    return (
         <NavigationContainer>
-           <Stack.Navigator name = "chat">
-               <Stack.Screen
-               name="Sign In"
-               component = {SignInScreen}
-               options = {{ headerShown: false }}
-               />
+            <Stack.Navigator name="chat">
+            <Stack.Screen
+                    name="SplashScreen"
+                    component={SplashScreen}
+                    options= {{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name="SignInScreen"
+                    component={SignInScreen}
+                    options= {{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name="Groups Screen"
+                    component={GroupsScreen}
+                    options={{ title: "Groups" }}
+                />
+                <Stack.Screen
+                    name="Add Group Screen"
+                    component={AddGroupScreen}
+                    options={{ title: "Add Group" }}
+                />
+                <Stack.Screen
+                    name="Chat Screen"
+                    component={ChatScreen}
+                    options={{ title: "Chats" }}
+                />
 
-               <Stack.Screen
-               name="Group Screen"
-               component = {GroupsScreen}
-               options = {{ title: "Groups" }}
-               />
-
-               <Stack.Screen
-               name="Add Group Screen"
-               component = {AddGroupScreen}
-               options = {{ title: "Add Group" }}
-               />
-
-               <Stack.Screen
-               name="Chat Screen"
-               component = {ChatScreen}
-               options = {{ title: "Chats" }}
-               />
-
-               </Stack.Navigator> 
+            </Stack.Navigator>
         </NavigationContainer>
     )
 }
 
-function MainStackNavigator () {
-    return(
+function MainStackNavigator() {
+    return (
         ChatFlow()
     )
 }
