@@ -14,9 +14,9 @@ function ChatFlow() {
         <NavigationContainer>
            <Stack.Navigator name = "chat">
                <Stack.Screen
-               name="SignInScreen"
+               name="Sign In"
                component = {SignInScreen}
-               option = {{ headerShown: false }}
+               options = {{ headerShown: false }}
                />
 
                <Stack.Screen
